@@ -10,8 +10,6 @@ int main(int argc, char **argv){
   int attacker, defender, reward, symbol, marginal;
   double random, transitionProb[2][2], dissipation, data[501], weight[2][2];
   
-  //double *data = new double [501];
-  
   for (int i = 0; i <= 500; i++){
     data[i] = 0;
   }
@@ -108,12 +106,9 @@ int main(int argc, char **argv){
   fstream output;
   output.open("dataFig5.dat", fstream::out);
   for (int i = 1; i <= 500; i++){
-    cout << to_string (data[i]) << endl;
     output << data[i] << endl;
   }
   output.close();
-
-  //delete [] data;
 
   return 0;
 }
